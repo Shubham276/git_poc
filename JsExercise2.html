@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Palindrome</title>
+    <script src="../js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script>
+    var input = prompt('Please enter a String.');
+    let isPalindrome = true;
+    for (let a = 0, b=input.length-1; a <= b; a++, b--) {
+        if (input[a] !== input[b]) {
+            isPalindrome = false
+        }
+    }
+    if(isPalindrome==true)
+    window.alert("Given String is Palindrome")
+    else
+    window.alert("Given String is not Palindrome")
+</script>
+
+</body>
+</html>

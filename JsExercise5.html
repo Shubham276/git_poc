@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+    <script src="../js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script>
+    var sal=[]
+    var age1=[]
+    var age2=[]
+    var age3=[]
+    var inc=[]
+    var emp = [
+    {Name:"Ceaser",age:21,salary:19000,DOB:01-11-1997},
+    {Name:"Kendel",age:19,salary:2800,DOB:11-09-1999},
+    {Name:"Juniper",age:17,salary:8000,DOB:19-12-2001},
+    {Name:"Marvel",age:25,salary:10800,DOB:14-01-1993},
+    {Name:"John",age:22,salary:2000,DOB:22-01-1996},
+    {Name:"Kate",age:21,salary:18000,DOB:10-08-1997},
+    {Name:"Prince",age:18,salary:1000,DOB:02-07-2000},
+    {Name:"Ashwell",age:20,salary:21000,DOB:08-06-1998},
+    {Name:"Tim",age:16,salary:2000,DOB:08-01-2002},
+    {Name:"Ben",age:18,salary:50000,DOB:05-07-2000},
+    {Name:"Rick",age:23,salary:500,DOB:05-05-1995},
+    {Name:"Tom",age:24,salary:100,DOB:17-11-1994}]
+
+    //Salary>5000
+
+    window.alert("filtering all employees with salary greater than 5000")
+
+    for(var i in emp)
+    {
+        if(emp[i].salary>5000)
+            sal.push(emp[i].Name)
+    }
+            window.alert(sal)
+
+
+    //group employee on the basis of their age
+
+    window.alert("grouping employee on the basis of their age")
+
+    for(var i in emp)
+    {
+        if(emp[i].age>21&&emp[i].age<=25)
+            age1.push(emp[i].Name)
+        else  if(emp[i].age>18&&emp[i].age<=21)
+            age2.push(emp[i].Name)
+        else if(emp[i].age>15&&emp[i].age<=18)
+            age3.push(emp[i].Name)
+    }
+
+    //salary less than 1000 and age greater than 20
+
+
+    for(var i in emp)
+    {
+        if(emp[i].salary<1000&&emp[i].age>20){
+            emp[i].salary=emp[i].salary*5
+            inc.push(emp[i].Name+" "+emp[i].salary)}
+    }
+            window.alert(sal)
+
+        window.alert("age betwee 22 to 25")
+        window.alert(age1)
+        window.alert("age betwee 19 to 21")
+        window.alert(age2)
+        window.alert("age betwee 16 to 18")
+        window.alert(age3)
+        window.alert("fetching employees with salary less than 1000 and age greater than 20. Then giving them an increment 5 times their salary.")
+        window.alert(inc)
+
+</script>
+</body>
+</html>
